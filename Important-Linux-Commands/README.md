@@ -2,7 +2,7 @@
 
 
 ## Create a new user:
-```adduser username```
+`adduser username`
   
 ## Add the user in sudoers list
   `usermod -aG sudo username`
