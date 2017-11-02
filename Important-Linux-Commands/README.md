@@ -2,11 +2,11 @@
 
 
 ## Create a new user:
-  adduser username
+  `adduser username`
   
 ## Add the user in sudoers list
-  usermod -aG sudo username
+  `usermod -aG sudo username`
   
 ## Check we can use sudo by switching to the newly created user
-  su - username
+  `su - username`
   
