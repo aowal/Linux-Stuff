@@ -21,10 +21,12 @@
 
 ### To secure the notebook with password first prepare a hashed password using the function in python:
 	
- ```from IPython.lib import passwd
+ ```
+ from IPython.lib import passwd
  password = passwd("your_password")
  password
- 'sha1:9e59c5ba9186:cecf9600b48b50f076c4481f0ce522d9f091cc90'```
+ 'sha1:9e59c5ba9186:cecf9600b48b50f076c4481f0ce522d9f091cc90'
+ ```
 
 ### Then to access with https create a ssl certificate in ~/.jupyter folder valid for 365 days with both the key and certificate data written to the same file:
 
