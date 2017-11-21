@@ -21,7 +21,7 @@
 
 ### To secure the notebook with password first prepare a hashed password using the function in python:
 	
- ```from IPython.lib import passwd'
+ ```from IPython.lib import passwd
  password = passwd("your_password")
  password
  'sha1:9e59c5ba9186:cecf9600b48b50f076c4481f0ce522d9f091cc90'```
