@@ -22,20 +22,34 @@
 #### To secure the notebook with password first prepare a hashed password using the function in python:
 	
  ```
- >> from IPython.lib import passwd
- >> password = passwd("your_password")
- >> password
-   'sha1:9e59c5ba9186:cecf9600b48b50f076c4481f0ce522d9f091cc90'
+ >>> from IPython.lib import passwd
+ >>> password = passwd("your_password")
+ >>> password
+ 'sha1:9e59c5ba9186:cecf9600b48b50f076c4481f0ce522d9f091cc90'
  ```
 
-### Then to access with https create a ssl certificate in ~/.jupyter folder valid for 365 days with both the key and certificate data written to the same file:
+#### Then to access with https create a ssl certificate in ~/.jupyter folder valid for 365 days with both the key and certificate data written to the same file:
 
  `openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem`
 
- ### Now edit the notebook config file, jupyter_notebook_config.py. By default, the notebook config file has all fields commented out. Now uncomment and edit jupyter_notebook_config.py as follows:
+ #### Now edit the notebook config file, jupyter_notebook_config.py. By default, the notebook config file has all fields commented out. Now uncomment and edit jupyter_notebook_config.py as follows:
 
- `c.NotebookApp.certfile = u'/home/username/.jupyter/mycert.pem'
+ ```
+ c.NotebookApp.certfile = u'/home/username/.jupyter/mycert.pem'
  c.NotebookApp.ip = 'your_server_ip_address'
  c.NotebookApp.open_browser = False
  c.NotebookApp.password = u'gernerated_sha_for_example_sha1:9e59c5ba9186:cecf9600b48b50f076c4481f0ce522d9f091cc90'
- c.NotebookApp.password_required = True`
+ c.NotebookApp.password_required = True
+ ```
+
+ #### Now start the jupyter in server with the following command:
+
+ `jupyter notebook --no-browser`
+
+ #### Also, you can run it with nohup in the background with the following command:
+
+ `nohup jupyter notebook --no-browser &`
+
+ #### Then, access the jupyter notebook with typing following addess:
+
+ `HOST_IP_ADDR:8888`
