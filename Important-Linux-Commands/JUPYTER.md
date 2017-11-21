@@ -15,16 +15,16 @@
 
 # Setup jupyter to run in remote server
 
-### Login as a non-root user and check in your home directory if a ".jupyter" folder exists. This folder holds the notebook configuration file "jupyter_notebook_config.py". If it does not exist, create it with the following command:
+#### Login as a non-root user and check in your home directory if a ".jupyter" folder exists. This folder holds the notebook configuration file "jupyter_notebook_config.py". If it does not exist, create it with the following command:
 	
  `jupyter notebook --generate-config`
 
-### To secure the notebook with password first prepare a hashed password using the function in python:
+#### To secure the notebook with password first prepare a hashed password using the function in python:
 	
  ```
- >>from IPython.lib import passwd
- >>password = passwd("your_password")
- >>password
+ >> from IPython.lib import passwd
+ >> password = passwd("your_password")
+ >> password
    'sha1:9e59c5ba9186:cecf9600b48b50f076c4481f0ce522d9f091cc90'
  ```
 
