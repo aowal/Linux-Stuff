@@ -1,9 +1,9 @@
-# Run jupyter notebook in remote server using SSH tunneling
+## Run jupyter notebook in remote server using SSH tunneling
 
 
 ### In remote host, open the terminal and type:
 
- `jupyter notebook --no-browser --port=8889`
+ ```jupyter notebook --no-browser --port=8889```
   
 ### In your local computer, open terminal, then type:
   
@@ -13,7 +13,7 @@
   
   `localhost:8888`
 
-# Setup jupyter to run in remote server
+## Setup jupyter to run in remote server
 
 #### Login as a non-root user and check in your home directory if a ".jupyter" folder exists. This folder holds the notebook configuration file "jupyter_notebook_config.py". If it does not exist, create it with the following command:
 	
