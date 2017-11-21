@@ -3,7 +3,9 @@
 
 ### In remote host, open the terminal and type:
 
- ```jupyter notebook --no-browser --port=8889```
+ ```
+ jupyter notebook --no-browser --port=8889
+ ```
   
 ### In your local computer, open terminal, then type:
   
