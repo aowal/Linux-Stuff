@@ -9,17 +9,23 @@
   
 ### In your local computer, open terminal, then type:
   
-  `ssh -N -f -L localhost:8888:localhost:8889 username@your_remote_host_ip`
+ ```
+ ssh -N -f -L localhost:8888:localhost:8889 username@your_remote_host_ip
+ ``` 
   
 ### Now open google chrome and type:
   
-  `localhost:8888`
+ ```
+ localhost:8888
+ ``` 
 
 ## Setup jupyter to run in remote server
 
 #### Login as a non-root user and check in your home directory if a ".jupyter" folder exists. This folder holds the notebook configuration file "jupyter_notebook_config.py". If it does not exist, create it with the following command:
 	
- `jupyter notebook --generate-config`
+ ```
+ jupyter notebook --generate-config
+ ```
 
 #### To secure the notebook with password first prepare a hashed password using the function in python:
 	
@@ -32,7 +38,9 @@
 
 #### Then to access with https create a ssl certificate in ~/.jupyter folder valid for 365 days with both the key and certificate data written to the same file:
 
- `openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem`
+ ```
+ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
+ ```
 
  #### Now edit the notebook config file, jupyter_notebook_config.py. By default, the notebook config file has all fields commented out. Now uncomment and edit jupyter_notebook_config.py as follows:
 
@@ -46,12 +54,18 @@
 
  #### Now start the jupyter in server with the following command:
 
- `jupyter notebook --no-browser`
+ ```
+ jupyter notebook --no-browser
+ ```
 
  #### Also, you can run it with nohup in the background with the following command:
 
- `nohup jupyter notebook --no-browser &`
+ ```
+ nohup jupyter notebook --no-browser &
+ ```
 
  #### Then, access the jupyter notebook with typing following addess:
 
- `HOST_IP_ADDR:8888`
+ ```
+ HOST_IP_ADDR:8888
+ ```
