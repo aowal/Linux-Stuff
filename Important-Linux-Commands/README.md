@@ -18,4 +18,12 @@
  ```
  su - username
  ```
+ 
+ #### Add a new virtualenv to jupyter notebook
+  
+ ```
+ source path-to-venv/bin/activate
+ pip install ipykernel
+ python -m ipykernel install --user --name=venv-name
+ ```
   
