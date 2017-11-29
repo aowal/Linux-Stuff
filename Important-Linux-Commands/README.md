@@ -26,4 +26,15 @@
  pip install ipykernel
  python -m ipykernel install --user --name=venv-name
  ```
+ 
+  #### Download a file from google drive using curl; replace {FILEID} with google drive id}
   
+ ```
+ curl -JLO 'https://docs.google.com/uc?export=download&id={FILEID}'
+ ```
+ 
+   #### Download a file from google drive using wget; replace {FILEID} with google drive id and {FILENAME} with your_filename
+  
+ ```
+ wget --no-check-certificate 'https://docs.google.com/uc?export=download&id={FILEID}' -O FILENAME
+ ```
