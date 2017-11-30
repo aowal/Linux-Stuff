@@ -38,3 +38,38 @@
  ```
  wget --no-check-certificate 'https://docs.google.com/uc?export=download&id={FILEID}' -O FILENAME
  ```
+   #### Copy file or folder using ssh from a remote server
+  
+ ```
+ scp -r {USERNAME}@{SERVER_IP_ADDRESS}:{REMOTE_SERVER_PATH_TO_THE_DIRECTORY} {LOCAL_PATH_OF_THE_DIRECTORY}
+ ```
+   #### Sent file or folder using ssh to a remote server
+  
+ ```
+ scp -r {LOCAL_PATH_OF_THE_DIRECTORY} {USERNAME}@{SERVER_IP_ADDRESS}:{REMOTE_SERVER_PATH_TO_THE_DIRECTORY}
+ ```
+   #### Check for any command after a fixed time with watch; for example
+  
+ ```
+ watch -n .5 htop
+ watch -n .3 showq -u username
+ ```
+
+   #### Install a python package without root access; it will install the package in the ~/.local/lib/pythonX.X/site-packages directory
+  
+ ```
+ pip install --user {PACKAGE_NAME}
+ ```
+ 
+   #### Install a python package in a custom directory; then need to add the path to PYTHONPATH environment variable
+  
+ ```
+ pip --trusted-host pypi.python.org install --target="{CUSTOM_DIRECTORY_PATH}" opencv-python
+ export PYTHONPATH="{CUSTOM_DIRECTORY_PATH}":$PYTHONPATH
+ ```
+   #### Or you can append the path to the sys.path in your python script
+  
+ ```
+import sys
+sys.path.append("{CUSTOM_DIRECTORY_PATH}")
+ ```
