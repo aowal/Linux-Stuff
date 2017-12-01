@@ -73,3 +73,14 @@
 import sys
 sys.path.append("{CUSTOM_DIRECTORY_PATH}")
  ```
+   #### Running a script with nohup in background with output redirrection(and error too) to a file 
+  
+ ```
+nohup python {SCRIPTNAME} > {OUTPUT_FILENAME} 2>&1 &
+ ```
+ 
+   #### If then at anytime you can stop it by killing with the following command:
+  
+ ```
+kill -9 {PID}
+ ```
