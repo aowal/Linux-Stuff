@@ -19,3 +19,11 @@
  export PATH="$PATH:{OPENMPI_INSTALLATION_PATH}/bin"
  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:{OPENMPI_INSTALLATION_PATH}/lib/"
  ```
+### Installing CuDNN
+
+```
+tar xvzf cudnn-8.0-linux-x64-v5.0-ga.tgz
+sudo cp -P cuda/include/cudnn.h {CUDA_HOME_PATH}/include
+sudo cp -P cuda/lib64/libcudnn* {CUDA_HOME_PATH}/lib64
+sudo chmod a+r {CUDA_HOME_PATH}/include/cudnn.h {CUDA_HOME_PATH}/lib64/libcudnn*
+```
