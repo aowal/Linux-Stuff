@@ -1,4 +1,4 @@
-### Installing Open-MPI:
+### Installing Open-MPI
 
 #### First, decompress the downloaded file from [https://www.open-mpi.org/software/ompi/](https://www.open-mpi.org/software/ompi/). Replace with correct version in openmpi-x.x.x
  ```
