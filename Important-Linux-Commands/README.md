@@ -90,3 +90,22 @@ kill -9 {PID}
  ```
 cd {MATCHING_DIRECTORY}; find . -name *.png -exec rm -rf {PATH_TO_THE_DELETE_DIRECTORY}/{} \;
  ```
+   #### Download files from a ftp server using ftp
+  
+ ```
+ftp {FTP_SERVER_NAME_OR_IP}
+  user: {USERNAME}
+  password: {PASSWORD}
+cd {PATH_TO_FILE}
+get {FILE_NAME}
+ ``` 
+   #### Download files from a ftp server using wget, can use -r to download recursively and -v for verbose output
+  
+ ```
+wget -r ftp://{USERNAME}:{PASSWORD}@{FTP_SERVER_NAME_OR_IP}/{PATH_TO_FILE_OR_FOLDER}
+ ```
+   #### Download files from a ftp server using curl, can use -r to download recursively and -v for verbose output
+  
+ ```
+curl -v -JLO -u {USERNAME}:{PASSWORD} ftp://{FTP_SERVER_NAME_OR_IP}/{PATH_TO_FILE_OR_FOLDER}
+ ```
