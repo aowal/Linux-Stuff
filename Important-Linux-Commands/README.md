@@ -88,7 +88,7 @@ kill -9 {PID}
    #### Delete files from a directory based on another directory those match a criteria(common files in two directories)
   
  ```
-cd {MATCHING_DIRECTORY}; find . -name *.png -exec rm -rf {PATH_TO_THE_DELETE_DIRECTORY}/{} \;
+cd {MATCHING_DIRECTORY}; find . -name '*.png' -exec rm -rf {PATH_TO_THE_DELETE_DIRECTORY}/{} \;
  ```
    #### Download files from a ftp server using ftp
   
