@@ -109,8 +109,6 @@ wget -r ftp://{USERNAME}:{PASSWORD}@{FTP_SERVER_NAME_OR_IP}/{PATH_TO_FILE_OR_FOL
  ```
 curl -v -JLO -u {USERNAME}:{PASSWORD} ftp://{FTP_SERVER_NAME_OR_IP}/{PATH_TO_FILE_OR_FOLDER}
  ```
- 
- ```
    #### Find folders with a name
   
  ```
