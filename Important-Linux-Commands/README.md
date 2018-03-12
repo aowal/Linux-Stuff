@@ -114,5 +114,17 @@ curl -v -JLO -u {USERNAME}:{PASSWORD} ftp://{FTP_SERVER_NAME_OR_IP}/{PATH_TO_FIL
  ```
  find . -type d -name "{FOLDER_NAME}"
  ``` 
+   #### Comment block in Vim
+  
+ ```
+1. First, go to the first line you want to comment. Then, press Ctrl + V to put the editor in the VISUAL BLOCK mode.
+2. Then using the arrow key and select until the last line.
+3. Now press Shift + I to put the editor in INSERT mode and then press #. This will add a hash to the first line.
+4. Then press Esc, and it will insert a # character on all other selected lines.
+ ``` 
+   #### Uncomment block in Vim
+  
+ ```
+Put your cursor on the first # character, press Ctrl + V , and go down until the last commented line and press x, that will delete all the # characters vertically.
+ ``` 
  
-
