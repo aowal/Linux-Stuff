@@ -125,6 +125,7 @@ curl -v -JLO -u {USERNAME}:{PASSWORD} ftp://{FTP_SERVER_NAME_OR_IP}/{PATH_TO_FIL
    #### Uncomment block in Vim
   
  ```
-Put your cursor on the first # character, press Ctrl + V , and go down until the last commented line and press x, that will delete all the # characters vertically.
+1. Put your cursor on the first # character, press Ctrl + V , and go down until the last commented line. 
+2. Then, press x, that will delete all the # characters vertically.
  ``` 
  
