@@ -128,4 +128,9 @@ curl -v -JLO -u {USERNAME}:{PASSWORD} ftp://{FTP_SERVER_NAME_OR_IP}/{PATH_TO_FIL
 1. Put your cursor on the first # character, press Ctrl + V , and go down until the last commented line. 
 2. Then, press x, that will delete all the # characters vertically.
  ``` 
+   #### Find size of folders in a directory and sort them by size
+  
+ ```
+ find . -type d -name "{FOLDER_NAME}" 
  
+ sudo du -hsc * | sort -hr
