@@ -131,6 +131,5 @@ curl -v -JLO -u {USERNAME}:{PASSWORD} ftp://{FTP_SERVER_NAME_OR_IP}/{PATH_TO_FIL
    #### Find size of folders in a directory and sort them by size
   
  ```
- find . -type d -name "{FOLDER_NAME}" 
- 
  sudo du -hsc * | sort -hr
+ ```
