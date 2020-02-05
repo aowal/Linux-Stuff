@@ -28,6 +28,6 @@ Download Data From Kaggle:
 5. Cancel download
 6. In the network inspector, you will see the request that the browser made to download the file
 7. Right click, Copy > Copy as cURL (POSIX)
-
 8. Paste the copied command in a remote VM, AND add the option to output to a file: -o dfdc_train_all.zip
+
 8.1. (Optional) Add --progress-bar flag to view download progress.
